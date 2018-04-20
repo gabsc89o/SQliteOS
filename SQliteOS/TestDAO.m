@@ -21,7 +21,10 @@
     }
     sqlite3_bind_text(_queryInsert, 1, [[prueba nombre] UTF8String], -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(_queryInsert, 2, [[prueba pais] UTF8String], -1, SQLITE_TRANSIENT);
+    int codigo = sqlite3_step(_queryInsert);
+    sqlite3_reset(_queryInsert);
     
+    return YES;
 }
 
 @end
