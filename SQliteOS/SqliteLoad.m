@@ -24,4 +24,8 @@
     return self;
 }
 
+-(void) destructor{
+    sqlite3_close(_bbdd);
+}
+
 @end
