@@ -19,6 +19,7 @@
 		AA5C837D208A4EE7000AFF69 /* SqliteLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C837C208A4EE7000AFF69 /* SqliteLoad.m */; };
 		AA5C8380208A555F000AFF69 /* TestDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C837F208A555F000AFF69 /* TestDAO.m */; };
 		AA5C8383208A5651000AFF69 /* ClasePrueba.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C8382208A5651000AFF69 /* ClasePrueba.m */; };
+		AAC6C2D3208E4049009F91FC /* bbdd.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = AAC6C2D2208E4048009F91FC /* bbdd.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		AA5C837F208A555F000AFF69 /* TestDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDAO.m; sourceTree = "<group>"; };
 		AA5C8381208A5651000AFF69 /* ClasePrueba.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClasePrueba.h; sourceTree = "<group>"; };
 		AA5C8382208A5651000AFF69 /* ClasePrueba.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClasePrueba.m; sourceTree = "<group>"; };
+		AAC6C2D2208E4048009F91FC /* bbdd.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = bbdd.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		AA5C8345208A45A0000AFF69 /* SQliteOS */ = {
 			isa = PBXGroup;
 			children = (
+				AAC6C2D2208E4048009F91FC /* bbdd.sqlite */,
 				AA5C8346208A45A0000AFF69 /* AppDelegate.h */,
 				AA5C8347208A45A0000AFF69 /* AppDelegate.m */,
 				AA5C8349208A45A0000AFF69 /* ViewController.h */,
@@ -265,6 +268,7 @@
 				AA5C8353208A45A3000AFF69 /* LaunchScreen.storyboard in Resources */,
 				AA5C8350208A45A3000AFF69 /* Assets.xcassets in Resources */,
 				AA5C834E208A45A0000AFF69 /* Main.storyboard in Resources */,
+				AAC6C2D3208E4049009F91FC /* bbdd.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

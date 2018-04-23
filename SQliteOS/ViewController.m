@@ -38,6 +38,16 @@
     NSError *error;
     TestDAO *td = [[TestDAO alloc]init];
     [td insertRecord:cp error:&error];
+    [_tnombre setText:@""];
+    [_tpais setText:@""];
+}
+
+-(IBAction)recuperarClick:(id)sender{
+    NSError *error;
+    TestDAO *td = [[TestDAO alloc]init];
+    ClasePrueba *cp = [td recuperarRecord];
+    [_tnombre setText:cp.nombre];
+    [_tpais setText:cp.pais];
 }
 
 @end

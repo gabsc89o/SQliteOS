@@ -11,10 +11,31 @@
 #import "SqliteLoad.h"
 
 @implementation TestDAO
+-(ClasePrueba *)recuperarRecord{
+    SqliteLoad *sql = [[SqliteLoad alloc] init];
+    sqlite3 *bbdd = [sql bbdd];
+    NSString *txt = @"select * from CLASEPRUEBA WHERE id=?";
+    // Preparamos la consulta
+    if (_queryInsert == nil ){
+        sqlite3_prepare_v2(bbdd, [txt UTF8String], -1, &_queryInsert, nil);
+    }
+    // Una vez preparada la consulta tenemos que sustituir los interrogantes por los valores que tocan
+    // Primer interrogante
+    sqlite3_bind_int64(_queryInsert, 1, 1);
+    ClasePrueba *rec = nil;
+    if (sqlite3_step(_queryInsert) == SQLITE_ROW){
+        NSString *nombre = [NSString stringWithUTF8String:(const char*) sqlite3_column_text(_queryInsert, 1)];
+        NSString *pais = [NSString stringWithUTF8String:(const char*) sqlite3_column_text(_queryInsert, 2)];
+        rec = [[ClasePrueba alloc] initConNombre:nombre pais:pais];
+        sqlite3_reset(_queryInsert);
+    }
+    return rec;
+}
 
 -(BOOL)insertRecord: (ClasePrueba *)prueba
               error:(NSError **)error{
-    sqlite3 *bbdd = [[SqliteLoad init] bbdd];
+    SqliteLoad *sql = [[SqliteLoad alloc] init];
+    sqlite3 *bbdd = [sql bbdd];
     NSString *txt = @"insert into CLASEPRUEBA (NOMBRE, PAIS) values (?,?)";
     if (_queryInsert == nil) {
         sqlite3_prepare_v2(bbdd, [txt UTF8String], -1, &_queryInsert, nil);
@@ -22,8 +43,10 @@
     sqlite3_bind_text(_queryInsert, 1, [[prueba nombre] UTF8String], -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(_queryInsert, 2, [[prueba pais] UTF8String], -1, SQLITE_TRANSIENT);
     int codigo = sqlite3_step(_queryInsert);
+    NSLog(@"Datos: %@, %@",[prueba nombre],[prueba pais]);
+    NSLog(@"Datos: %d",codigo);
     sqlite3_reset(_queryInsert);
-    
+
     return YES;
 }
 
