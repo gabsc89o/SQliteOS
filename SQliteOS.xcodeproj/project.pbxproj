@@ -19,6 +19,7 @@
 		AA5C837D208A4EE7000AFF69 /* SqliteLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C837C208A4EE7000AFF69 /* SqliteLoad.m */; };
 		AA5C8380208A555F000AFF69 /* TestDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C837F208A555F000AFF69 /* TestDAO.m */; };
 		AA5C8383208A5651000AFF69 /* ClasePrueba.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C8382208A5651000AFF69 /* ClasePrueba.m */; };
+		AA62634F208F6B4400EB74FD /* tablaDS.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62634E208F6B4400EB74FD /* tablaDS.m */; };
 		AAC6C2D3208E4049009F91FC /* bbdd.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = AAC6C2D2208E4048009F91FC /* bbdd.sqlite */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		AA5C837F208A555F000AFF69 /* TestDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDAO.m; sourceTree = "<group>"; };
 		AA5C8381208A5651000AFF69 /* ClasePrueba.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClasePrueba.h; sourceTree = "<group>"; };
 		AA5C8382208A5651000AFF69 /* ClasePrueba.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClasePrueba.m; sourceTree = "<group>"; };
+		AA62634D208F6B4300EB74FD /* tablaDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tablaDS.h; sourceTree = "<group>"; };
+		AA62634E208F6B4400EB74FD /* tablaDS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tablaDS.m; sourceTree = "<group>"; };
 		AAC6C2D2208E4048009F91FC /* bbdd.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = bbdd.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +135,8 @@
 				AA5C837F208A555F000AFF69 /* TestDAO.m */,
 				AA5C8381208A5651000AFF69 /* ClasePrueba.h */,
 				AA5C8382208A5651000AFF69 /* ClasePrueba.m */,
+				AA62634D208F6B4300EB74FD /* tablaDS.h */,
+				AA62634E208F6B4400EB74FD /* tablaDS.m */,
 			);
 			path = SQliteOS;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				AA5C834B208A45A0000AFF69 /* ViewController.m in Sources */,
 				AA5C8380208A555F000AFF69 /* TestDAO.m in Sources */,
 				AA5C837D208A4EE7000AFF69 /* SqliteLoad.m in Sources */,
+				AA62634F208F6B4400EB74FD /* tablaDS.m in Sources */,
 				AA5C8356208A45A3000AFF69 /* main.m in Sources */,
 				AA5C8348208A45A0000AFF69 /* AppDelegate.m in Sources */,
 				AA5C8383208A5651000AFF69 /* ClasePrueba.m in Sources */,

@@ -19,8 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _tablaDS = [[tablaDS alloc]init];
+    [_tablePruebas setDataSource:_tablaDS];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    TestDAO *td = [[TestDAO alloc]init];
+     NSError *error;
+    [_tablaDS setPruebas:[td listarPruebas :&error]];
+    [_tablePruebas reloadData];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
